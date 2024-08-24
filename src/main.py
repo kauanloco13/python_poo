@@ -23,22 +23,24 @@ if __name__ == "__main__":
     nm_modelo = input('Digite o modelo: ')
     nm_marca = input('Digite a marca: ')
     nm_cor = input('Digite a cor: ')
-
+    nm_tanque = float(input("Digite quantos litros de combustível o carro tem: "))
+    nm_consumo = float(input("Digite o consumo médio do carro: "))
     kms = float(input('Digite com quantos Kms: '))
 
-    carro1 = Carro(nm_modelo, nm_marca, nm_cor, kms, motor = False)
+    carro1 = Carro(nm_modelo, nm_marca, nm_cor, kms, nm_tanque, nm_consumo, motor = False)
 
     print('Cadastre um carro')
     nm_modelo = input('Digite o modelo: ')
     nm_marca = input('Digite a marca: ')
     nm_cor = input('Digite a cor: ')
-
+    nm_tanque = float(input("Digite quantos litros de combustível o carro tem: "))
+    nm_consumo = float(input("Digite o consumo médio do carro: "))
     kms = float(input('Digite com quantos Kms: '))
 
-    carro2 = Carro(nm_modelo, nm_marca, nm_cor, kms, motor=False)
+    carro2 = Carro(nm_modelo, nm_marca, nm_cor, kms, nm_tanque,  nm_consumo, motor=False)
 
     '''
-    Controlando o carro até ele atingir 10000 Km
+    Controlando o carro até ele atingir 600 Km ou 
     '''
     while carro1.odometro < 600 and carro2.odometro < 600:
         try:
@@ -58,6 +60,8 @@ if __name__ == "__main__":
         except Exception as e:
             print("Erro!")
             print(e)
+
+
 
     carro1.desligar()
     carro2.desligar()
